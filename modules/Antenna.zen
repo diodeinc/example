@@ -1,0 +1,17 @@
+load("@stdlib/properties.zen", "Layout")
+
+output = io("output", Net)
+
+prefix = config("prefix", str, default="AE")
+
+Component(
+    name = "Antenna",
+    footprint = File("@kicad-footprints/RF_Antenna.pretty/Texas_SWRA416_868MHz_915MHz.kicad_mod"),
+    prefix = prefix,
+    symbol = Symbol("@kicad-symbols/Device.kicad_sym:Antenna"),
+    pins = {
+        "A": output,
+    }
+)
+
+Layout(name = "Antenna", path = "build/preview")

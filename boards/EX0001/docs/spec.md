@@ -1,5 +1,5 @@
 ---
-title: "CS0001 - IMU Sensor Board with Signal Conditioning"
+title: "EX0001 - Antenna LRC Matching Network"
 # url: ""
 confidential: false
 company:
@@ -9,209 +9,95 @@ client:
   name: "Customer"
 releases:
   - version: "0.1.0"
-    date: "2024/12/28"
-    description: "Initial specification compiled from CS0001.zen board definition."
+    date: "2025/08/23"
+    description: "Initial specification compiled from EX0001.zen board definition."
     commit: ""
     warnings:
-      - "Verify MPU-9250 I2C address configuration and pullup requirements before tape-out."
-      - "Confirm power supply voltage and current requirements for all modules."
-      - "Validate low-pass filter cutoff frequency for target application."
+      - "Confirm target band (e.g., 868–915 MHz) and tune R/L/C accordingly."
+      - "Provide ground via stitching around SMA and antenna feed."
+      - "Validate antenna keepout per footprint application note (SWRA416)."
 notes:
   - title: "Open items"
-    date: "2024/12/28"
+    date: "2025/08/23"
     content: |
-      - Confirm exact MPU-9250 variant and package specifications
-      - Specify exact cutoff frequency for LowPassFilter module (currently defaulted to 20kHz)
-      - Define mechanical constraints for 4x M2 mounting holes
-      - Validate power LED current limiting resistor value for target supply voltage
-      - Confirm I2C pullup resistor requirements and values
+      - Finalize target frequency and impedance goals (S11 / bandwidth)
+      - Tune values for L1/C1/R1 on bench or EM simulation
+      - Define board outline, keepout under antenna, and via stitching pattern
+      - Specify reference plane stackup and 50 Ω trace geometry to feed
 ---
 
 # Description
 
-CS0001 is an IMU sensor board featuring an MPU-9250 9-axis motion sensor with integrated signal conditioning and power indication. The board provides I2C communication interface, configurable low-pass filtering for the sensor interrupt signal, and visual power indication via an LED. The design includes four M2 mounting holes for mechanical attachment.
+EX0001 is a simple RF matching network connecting a vertical SMA connector to a PCB antenna footprint. The network implements a series inductor (L1), shunt capacitor to ground (C1), and a series resistor (R1) to shape impedance (CRC topology) for operation in the 868–915 MHz ISM band.
 
-The board combines three main functional modules:
+The design composes the following modules from the Zener description (`boards/EX0001/EX0001.zen`):
 
-- **IMU Sensor Module**: MPU-9250 with power indicator LED
-- **Signal Conditioning**: 4th-order configurable low-pass filter
-- **Power Indication**: Standalone power LED with current limiting
+- **SMA Connector**: Vertical SMA (Amphenol 132134), input reference
+- **Matching Network**: L1 (series), C1 (shunt to GND), R1 (series)
+- **PCB Antenna**: Meandered antenna footprint (Texas SWRA416 868/915 MHz)
 
 **Board acceptance test criteria:**
 
-- [ ] MPU-9250 sensor responds correctly to I2C commands at expected address
-- [ ] Power LED illuminates when VCC is applied within specified voltage range
-- [ ] Low-pass filter provides expected frequency response on sensor interrupt signal
-- [ ] I2C communication operates reliably at standard and fast-mode frequencies
-- [ ] All mounting holes provide secure mechanical attachment
+- [ ] Continuity from SMA center → L1 → T-junction → R1 → antenna feed
+- [ ] C1 shunts from T-junction to RF ground; SMA shell to ground net
+- [ ] Footprints match library references; pins map to nets as defined
+- [ ] DRC passes for clearances, antenna keepout, and via stitching
+- [ ] Optional: S11 < -10 dB around target frequency after tuning
 
 # Block diagram
 
-## Board Layout with Interfaces
-
-```mermaid
-graph TB
-    subgraph "CS0001 Board"
-        subgraph "Power & Ground"
-            VCC["VCC<br/>(Power Supply)"]
-            GND["GND<br/>(Ground)"]
-        end
-
-        subgraph "Communication"
-            I2C["I2C Interface<br/>(SDA/SCL)"]
-        end
-
-        subgraph "Signal Outputs"
-            SENSOR_OUT["SENSOR_OUT<br/>(IMU Interrupt)"]
-            MCU_IN["MCU_IN<br/>(Filtered Signal)"]
-        end
-
-        subgraph "Mechanical"
-            MOUNT["4x M2<br/>Mounting Holes"]
-        end
-    end
-```
-
-## Signal Path Diagrams
-
-### 1. Power Distribution
+## RF path and interfaces
 
 ```mermaid
 graph LR
-    VCC_IN["VCC Input"] --> IMU_PWR["IMU Module<br/>• MPU-9250<br/>• Power LED"]
-    VCC_IN --> FILTER_PWR["LowPassFilter<br/>• Passive components"]
-    VCC_IN --> LED_PWR["PowerLed<br/>• Status indicator"]
-
-    GND_IN["GND Input"] --> IMU_GND["IMU Module Ground"]
-    GND_IN --> FILTER_GND["Filter Ground"]
-    GND_IN --> LED_GND["LED Ground"]
+    SMA["SMA<br/>Amphenol 132134"] -- RF_IN --> L1["L1<br/>10 nH (0603)"]
+    L1 --> T[T junction]
+    T --> R1["R1<br/>100 Ω (0603)"] --> ANT_FEED["Antenna Feed"]
+    T -. shunt .-> C1["C1<br/>10 pF (0603)"]
+    C1 --> GND["RF GND"]
+    ANT_FEED --> ANT["PCB Antenna<br/>SWRA416 868/915 MHz"]
 ```
 
-### 2. I2C Communication Path
+## Nets
 
-```mermaid
-graph LR
-    I2C_EXT["External I2C<br/>• SDA/SCL"] --> I2C_BUS["I2C Bus<br/>• Optional pullups"] --> MPU9250["MPU-9250<br/>• 9-axis sensor<br/>• I2C slave"]
-```
+- **input**: SMA center pin to L1
+- **t_junction**: Node between L1, C1, and R1
+- **output**: Antenna feed after R1
+- **gnd**: RF ground (SMA shell and shunt reference)
 
-### 3. Signal Conditioning Path
+## Interface specifications
 
-```mermaid
-graph LR
-    MPU9250_INT["MPU-9250<br/>• INT pin"] --> SENSOR_OUT["SENSOR_OUT<br/>• Raw interrupt"]
-    SENSOR_OUT --> LPF["4th Order LPF<br/>• Configurable fc<br/>• Default: 20kHz"]
-    LPF --> MCU_IN["MCU_IN<br/>• Filtered signal"]
-```
+- **RF_IN (SMA center)**: 50 Ω source expected
+- **RF_OUT (antenna feed)**: To PCB antenna footprint, observe keepout
+- **GND (RF return)**: Low-impedance ground with via stitching near SMA and antenna
 
-### 4. Power Indication
+## Component details
 
-```mermaid
-graph LR
-    VCC_PWR["VCC"] --> LED_CKT["LED Circuit<br/>• Green LED<br/>• 1kΩ current limit<br/>• 100nF decoupling"]
-    LED_CKT --> GND_PWR["GND"]
-```
+### SMA Connector (SMA_Connector)
 
-## Component Details
+- Footprint: `@kicad-footprints/Connector_Coaxial.pretty/SMA_Amphenol_132134_Vertical.kicad_mod`
+- Symbol: `@kicad-symbols/Connector.kicad_sym:Conn_Coaxial_Small`
 
-### IMU Sensor Module (ImuSensor.zen)
+### Antenna (Antenna)
 
-- **Primary Component**: MPU-9250 9-axis motion sensor
-  - 3-axis gyroscope
-  - 3-axis accelerometer
-  - 3-axis magnetometer
-  - I2C interface (configurable address)
-  - Interrupt output pin
-- **Power Indicator**: Green LED with current limiting
-- **Decoupling**: 100nF capacitor
-- **Configuration**: Optional I2C pullup resistors (disabled by default)
+- Footprint: `@kicad-footprints/RF_Antenna.pretty/Texas_SWRA416_868MHz_915MHz.kicad_mod`
+- Symbol: `@kicad-symbols/Device.kicad_sym:Antenna`
 
-### Low-Pass Filter Module (LowPassFilter.zen)
+### Passives
 
-- **Topology**: 4th-order cascaded RC stages
-- **Frequency Range**: 10Hz to 500kHz (configurable)
-- **Default Setting**: 20kHz cutoff frequency
-- **Component Values**: Optimized for standard 0402 components
-- **Stages**: 4 identical RC sections for -80dB/decade rolloff
+- L1: 10 nH, 0603 (series, `input` → `t_junction`)
+- C1: 10 pF, 0603 (shunt, `t_junction` → `gnd`)
+- R1: 100 Ω, 0603 (series, `t_junction` → `output`)
 
-#### Filter Frequency Options
+## Design considerations
 
-| Setting   | R Value  | C Value  | Cutoff Frequency    |
-| --------- | -------- | -------- | ------------------- |
-| 10Hz      | 16kΩ     | 1µF      | 10Hz                |
-| 50Hz      | 3.3kΩ    | 1µF      | 50Hz                |
-| 100Hz     | 1.6kΩ    | 1µF      | 100Hz               |
-| 500Hz     | 330Ω     | 1µF      | 500Hz               |
-| 1kHz      | 1.6kΩ    | 100nF    | 1kHz                |
-| 2kHz      | 820Ω     | 100nF    | 2kHz                |
-| 5kHz      | 330Ω     | 100nF    | 5kHz                |
-| 10kHz     | 1.6kΩ    | 10nF     | 10kHz               |
-| **20kHz** | **820Ω** | **10nF** | **20kHz** (default) |
-| 50kHz     | 330Ω     | 10nF     | 50kHz               |
-| 100kHz    | 1.6kΩ    | 1nF      | 100kHz              |
-| 200kHz    | 820Ω     | 1nF      | 200kHz              |
-| 500kHz    | 330Ω     | 1nF      | 500kHz              |
+- Maintain 50 Ω transmission line from SMA to matching network and to antenna feed (stackup-dependent)
+- Provide ground via stitching near SMA, along the feed, and around C1 return
+- Observe antenna footprint keepout and reference plane requirements (per SWRA416)
+- Short, direct shunt path for C1 to ground; minimize loop area
+- Tune R/L/C empirically or via EM/circuit simulation for the target band
 
-### Power LED Module (PowerLed.zen)
+## Generated artifacts
 
-- **LED**: Green 0402 package
-- **Current Limiting**: 1kΩ resistor
-- **Decoupling**: 100nF capacitor
-- **Function**: Visual power-on indication
-
-## Interface Specifications
-
-### Power Interface
-
-- **VCC**: Primary power input
-  - Voltage range: TBD (verify MPU-9250 specifications)
-  - Current consumption: TBD (measure actual board consumption)
-- **GND**: Ground reference
-
-### I2C Interface
-
-- **SDA**: I2C data line
-- **SCL**: I2C clock line
-- **Pullup Resistors**: Optional (configurable in IMU module)
-- **Supported Speeds**: Standard-mode (100kHz), Fast-mode (400kHz)
-
-### Signal Interface
-
-- **SENSOR_OUT**: Raw MPU-9250 interrupt signal
-  - Logic levels: VCC/GND
-  - Drive capability: Per MPU-9250 specifications
-- **MCU_IN**: Filtered interrupt signal
-  - Filtered version of SENSOR_OUT
-  - Reduced high-frequency noise
-  - Same logic levels as SENSOR_OUT
-
-### Mechanical Interface
-
-- **Mounting**: 4x M2 threaded holes
-- **Layout**: Positioned for secure board mounting
-- **Spacing**: TBD (verify layout coordinates)
-
-## Design Considerations
-
-### Signal Integrity
-
-- Low-pass filter provides anti-aliasing for interrupt signal sampling
-- 4th-order response ensures sharp cutoff with minimal passband ripple
-- Standard component values ensure reliable performance across temperature
-
-### Power Management
-
-- Decoupling capacitors on all power rails
-- Visual power indication for troubleshooting
-- Current-limited LED prevents excessive power consumption
-
-### I2C Reliability
-
-- Configurable pullup resistors accommodate various bus configurations
-- Standard I2C voltage levels and timing
-- Interrupt-driven operation reduces bus traffic
-
-### Manufacturing
-
-- All components use standard 0402 packages
-- Single-sided component placement (verify from layout)
-- Standard PCB thickness and stackup requirements
+- Zener layout hint: `Layout(name = "Antenna CRC Matcher", path = "build/preview")`
+- Use the `pcb` compiler to generate KiCad outputs from `EX0001.zen`

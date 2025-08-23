@@ -1,0 +1,17 @@
+load("@stdlib/interfaces.zen", "Ground")
+load("@stdlib/properties.zen", "Layout")
+
+input = io("input", Net)
+external = io("external", Net)
+
+Component(
+    name = "SMA_Connector",
+    footprint = File("@kicad-footprints/Connector_Coaxial.pretty/SMA_Amphenol_132134_Vertical.kicad_mod"),
+    symbol = Symbol("@kicad-symbols/Connector.kicad_sym:Conn_Coaxial_Small"),
+    pins = {
+        "In": input,
+        "Ext": external
+    }
+)
+
+Layout(name = "SMA Connector", path = "build/preview")
