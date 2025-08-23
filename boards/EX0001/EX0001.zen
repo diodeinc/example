@@ -5,6 +5,9 @@ IN = Net("IN")
 OUT = Net("OUT")
 GND = Ground("GND")
 
+# Generics
+MountingHole = Module("@stdlib/generics/MountingHole.zen")
+
 MatchingNetwork = Module("//modules/MatchingNetwork.zen")
 Antenna = Module("//components/Antenna/Antenna.zen")
 SMA_Connector = Module("//components/SMAConnector/SMAConnector.zen")
@@ -12,6 +15,9 @@ SMA_Connector = Module("//components/SMAConnector/SMAConnector.zen")
 Antenna(name = "Antenna", A = OUT)
 MatchingNetwork(name = "MatchingNetwork", io_IN = IN, io_OUT = OUT, io_GND = GND)
 SMA_Connector(name = "SMA_Connector", In = IN, Ext = GND)
+
+for i in range(4):
+    MountingHole(name = "H" + str(i), diameter = "M2")
 
 Layout(name = "Antenna LRC Matcher", path = "build/preview")
 
