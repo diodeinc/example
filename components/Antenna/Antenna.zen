@@ -1,6 +1,6 @@
 load("@stdlib/properties.zen", "Layout")
 
-output = io("output", Net)
+A = io("A", Net)
 
 prefix = config("prefix", str, default="AE")
 
@@ -10,7 +10,7 @@ Component(
     prefix = prefix,
     symbol = Symbol("@kicad-symbols/Device.kicad_sym:Antenna"),
     pins = {
-        "A": output,
+        "A": A,
     }
 )
 

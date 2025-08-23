@@ -1,0 +1,1287 @@
+{
+  "instances": {
+    "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.R1.R": {
+      "type_ref": {
+        "source_path": "/Users/abhinavreddy/Library/Caches/pcb/github/diodeinc/stdlib/HEAD/generics/Resistor.zen",
+        "module_name": "R"
+      },
+      "kind": "Component",
+      "attributes": {
+        "Value": {
+          "String": "100"
+        },
+        "Package": {
+          "String": "0603"
+        },
+        "footprint": {
+          "String": "/Users/abhinavreddy/Library/Caches/pcb/gitlab/kicad/libraries/kicad-footprints/9.0.0/Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod"
+        },
+        "Type": {
+          "String": "resistor"
+        },
+        "prefix": {
+          "String": "R"
+        },
+        "__resistance__": {
+          "Physical": {
+            "value": "100",
+            "tolerance": "0",
+            "unit": "Ohms"
+          }
+        },
+        "__symbol_value": {
+          "String": "(symbol\n  \"R\"\n  (pin_numbers\n    (hide yes)\n  )\n  (pin_names\n    (offset 0)\n  )\n  (exclude_from_sim no)\n  (in_bom yes)\n  (on_board yes)\n  (property\n    \"Reference\"\n    \"R\"\n    (at 2.032 0 90)\n    (effects\n      (font (size 1.27 1.27))\n    )\n  )\n  (property\n    \"Value\"\n    \"R\"\n    (at 0 0 90)\n    (effects\n      (font (size 1.27 1.27))\n    )\n  )\n  (property\n    \"Footprint\"\n    \"\"\n    (at -1.778 0 90)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"Datasheet\"\n    \"~\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"Description\"\n    \"Resistor\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"ki_keywords\"\n    \"R res resistor\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"ki_fp_filters\"\n    \"R_*\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (symbol\n    \"R_0_1\"\n    (rectangle\n      (start\n        -1.016\n        -2.54\n      )\n      (end\n        1.016\n        2.54\n      )\n      (stroke\n        (width 0.254)\n        (type default)\n      )\n      (fill\n        (type none)\n      )\n    )\n  )\n  (symbol\n    \"R_1_1\"\n    (pin\n      passive\n      line\n      (at 0 3.81 270)\n      (length 1.27)\n      (name\n        \"~\"\n        (effects\n          (font (size 1.27 1.27))\n        )\n      )\n      (number\n        \"1\"\n        (effects\n          (font (size 1.27 1.27))\n        )\n      )\n    )\n    (pin\n      passive\n      line\n      (at 0 -3.81 90)\n      (length 1.27)\n      (name\n        \"~\"\n        (effects\n          (font (size 1.27 1.27))\n        )\n      )\n      (number\n        \"2\"\n        (effects\n          (font (size 1.27 1.27))\n        )\n      )\n    )\n  )\n  (embedded_fonts no)\n)"
+        },
+        "Resistance": {
+          "String": "100"
+        },
+        "symbol_path": {
+          "String": "/Users/abhinavreddy/Library/Caches/pcb/gitlab/kicad/libraries/kicad-symbols/9.0.0/Device.kicad_sym"
+        },
+        "symbol_name": {
+          "String": "R"
+        }
+      },
+      "children": {
+        "P1": "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.R1.R.P1",
+        "P2": "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.R1.R.P2"
+      },
+      "reference_designator": "R1"
+    },
+    "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.L1.L.2": {
+      "type_ref": {
+        "source_path": "/Users/abhinavreddy/Library/Caches/pcb/github/diodeinc/stdlib/HEAD/generics/Inductor.zen",
+        "module_name": "L"
+      },
+      "kind": "Port",
+      "attributes": {
+        "pads": {
+          "Array": [
+            {
+              "String": "2"
+            }
+          ]
+        }
+      },
+      "children": {},
+      "reference_designator": null
+    },
+    "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.L1": {
+      "type_ref": {
+        "source_path": "/Users/abhinavreddy/Library/Caches/pcb/github/diodeinc/stdlib/HEAD/generics/Inductor.zen",
+        "module_name": "<root>"
+      },
+      "kind": "Module",
+      "attributes": {
+        "__signature": {
+          "Json": {
+            "parameters": [
+              {
+                "default_value": null,
+                "has_default": false,
+                "help": null,
+                "is_config": true,
+                "name": "package",
+                "optional": false,
+                "typ": {
+                  "kind": "enum",
+                  "name": "function",
+                  "variants": [
+                    "0201",
+                    "0402",
+                    "0603",
+                    "0805",
+                    "1206",
+                    "1210",
+                    "2010",
+                    "2512",
+                    "KICAD"
+                  ]
+                },
+                "value": {
+                  "Enum": {
+                    "variant": "0603"
+                  }
+                }
+              },
+              {
+                "default_value": {
+                  "Record": {
+                    "fields": {
+                      "__str__": {
+                        "Unsupported": "function"
+                      },
+                      "tolerance": {
+                        "Float": 0.0
+                      },
+                      "unit": {
+                        "Enum": {
+                          "variant": "H"
+                        }
+                      },
+                      "value": {
+                        "Float": 0.0
+                      }
+                    }
+                  }
+                },
+                "has_default": true,
+                "help": null,
+                "is_config": true,
+                "name": "value",
+                "optional": false,
+                "typ": {
+                  "fields": {},
+                  "kind": "record",
+                  "name": "function"
+                },
+                "value": {
+                  "Record": {
+                    "fields": {
+                      "__str__": {
+                        "Unsupported": "function"
+                      },
+                      "tolerance": {
+                        "Float": 0.0
+                      },
+                      "unit": {
+                        "Enum": {
+                          "variant": "H"
+                        }
+                      },
+                      "value": {
+                        "Float": 1e-8
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "default_value": {
+                  "Enum": {
+                    "variant": "SMD"
+                  }
+                },
+                "has_default": true,
+                "help": null,
+                "is_config": true,
+                "name": "mount",
+                "optional": true,
+                "typ": {
+                  "kind": "enum",
+                  "name": "function",
+                  "variants": [
+                    "SMD"
+                  ]
+                },
+                "value": {
+                  "Enum": {
+                    "variant": "SMD"
+                  }
+                }
+              },
+              {
+                "default_value": "None",
+                "has_default": true,
+                "help": null,
+                "is_config": true,
+                "name": "current",
+                "optional": true,
+                "typ": {
+                  "kind": "unknown",
+                  "type_name": "None | Current"
+                },
+                "value": "None"
+              },
+              {
+                "default_value": {
+                  "Dict": {}
+                },
+                "has_default": true,
+                "help": null,
+                "is_config": true,
+                "name": "user_properties",
+                "optional": true,
+                "typ": {
+                  "key": {
+                    "kind": "string"
+                  },
+                  "kind": "dict",
+                  "value": {
+                    "kind": "unknown",
+                    "type_name": "any"
+                  }
+                },
+                "value": {
+                  "Dict": {}
+                }
+              },
+              {
+                "default_value": null,
+                "has_default": false,
+                "help": null,
+                "is_config": true,
+                "name": "mpn",
+                "optional": true,
+                "typ": {
+                  "kind": "string"
+                },
+                "value": "None"
+              },
+              {
+                "default_value": null,
+                "has_default": false,
+                "help": null,
+                "is_config": true,
+                "name": "do_not_populate",
+                "optional": true,
+                "typ": {
+                  "kind": "bool"
+                },
+                "value": "None"
+              },
+              {
+                "default_value": null,
+                "has_default": false,
+                "help": null,
+                "is_config": true,
+                "name": "exclude_from_bom",
+                "optional": true,
+                "typ": {
+                  "kind": "bool"
+                },
+                "value": "None"
+              },
+              {
+                "default_value": {
+                  "Net": {
+                    "id": 346,
+                    "name": "P1",
+                    "properties": {}
+                  }
+                },
+                "has_default": true,
+                "help": null,
+                "is_config": false,
+                "name": "P1",
+                "optional": false,
+                "typ": {
+                  "kind": "net"
+                },
+                "value": {
+                  "Net": {
+                    "id": 341,
+                    "name": "io_IN",
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "default_value": {
+                  "Net": {
+                    "id": 347,
+                    "name": "P2",
+                    "properties": {}
+                  }
+                },
+                "has_default": true,
+                "help": null,
+                "is_config": false,
+                "name": "P2",
+                "optional": false,
+                "typ": {
+                  "kind": "net"
+                },
+                "value": {
+                  "Net": {
+                    "id": 345,
+                    "name": "T",
+                    "properties": {}
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "children": {
+        "L": "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.L1.L"
+      },
+      "reference_designator": null
+    },
+    "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.C1.C": {
+      "type_ref": {
+        "source_path": "/Users/abhinavreddy/Library/Caches/pcb/github/diodeinc/stdlib/HEAD/generics/Capacitor.zen",
+        "module_name": "C"
+      },
+      "kind": "Component",
+      "attributes": {
+        "__symbol_value": {
+          "String": "(symbol\n  \"C\"\n  (pin_numbers\n    (hide yes)\n  )\n  (pin_names\n    (offset 0.254)\n  )\n  (exclude_from_sim no)\n  (in_bom yes)\n  (on_board yes)\n  (property\n    \"Reference\"\n    \"C\"\n    (at 0.635 2.54 0)\n    (effects\n      (font (size 1.27 1.27))\n      (justify left)\n    )\n  )\n  (property\n    \"Value\"\n    \"C\"\n    (at 0.635 -2.54 0)\n    (effects\n      (font (size 1.27 1.27))\n      (justify left)\n    )\n  )\n  (property\n    \"Footprint\"\n    \"\"\n    (at 0.9652 -3.81 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"Datasheet\"\n    \"~\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"Description\"\n    \"Unpolarized capacitor\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"ki_keywords\"\n    \"cap capacitor\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"ki_fp_filters\"\n    \"C_*\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (symbol\n    \"C_0_1\"\n    (polyline\n      (pts\n        (xy -2.032 0.762)\n        (xy 2.032 0.762)\n      )\n      (stroke\n        (width 0.508)\n        (type default)\n      )\n      (fill\n        (type none)\n      )\n    )\n    (polyline\n      (pts\n        (xy -2.032 -0.762)\n        (xy 2.032 -0.762)\n      )\n      (stroke\n        (width 0.508)\n        (type default)\n      )\n      (fill\n        (type none)\n      )\n    )\n  )\n  (symbol\n    \"C_1_1\"\n    (pin\n      passive\n      line\n      (at 0 3.81 270)\n      (length 2.794)\n      (name\n        \"~\"\n        (effects\n          (font (size 1.27 1.27))\n        )\n      )\n      (number\n        \"1\"\n        (effects\n          (font (size 1.27 1.27))\n        )\n      )\n    )\n    (pin\n      passive\n      line\n      (at 0 -3.81 90)\n      (length 2.794)\n      (name\n        \"~\"\n        (effects\n          (font (size 1.27 1.27))\n        )\n      )\n      (number\n        \"2\"\n        (effects\n          (font (size 1.27 1.27))\n        )\n      )\n    )\n  )\n  (embedded_fonts no)\n)"
+        },
+        "prefix": {
+          "String": "C"
+        },
+        "Type": {
+          "String": "capacitor"
+        },
+        "footprint": {
+          "String": "/Users/abhinavreddy/Library/Caches/pcb/gitlab/kicad/libraries/kicad-footprints/9.0.0/Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod"
+        },
+        "Package": {
+          "String": "0603"
+        },
+        "Capacitance": {
+          "String": "10pF"
+        },
+        "symbol_path": {
+          "String": "/Users/abhinavreddy/Library/Caches/pcb/gitlab/kicad/libraries/kicad-symbols/9.0.0/Device.kicad_sym"
+        },
+        "symbol_name": {
+          "String": "C"
+        },
+        "__capacitance__": {
+          "Physical": {
+            "value": "0.00000000001",
+            "tolerance": "0",
+            "unit": "Farads"
+          }
+        },
+        "Value": {
+          "String": "10pF"
+        }
+      },
+      "children": {
+        "P1": "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.C1.C.P1",
+        "P2": "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.C1.C.P2"
+      },
+      "reference_designator": "C1"
+    },
+    "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.L1.L.1": {
+      "type_ref": {
+        "source_path": "/Users/abhinavreddy/Library/Caches/pcb/github/diodeinc/stdlib/HEAD/generics/Inductor.zen",
+        "module_name": "L"
+      },
+      "kind": "Port",
+      "attributes": {
+        "pads": {
+          "Array": [
+            {
+              "String": "1"
+            }
+          ]
+        }
+      },
+      "children": {},
+      "reference_designator": null
+    },
+    "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.C1": {
+      "type_ref": {
+        "source_path": "/Users/abhinavreddy/Library/Caches/pcb/github/diodeinc/stdlib/HEAD/generics/Capacitor.zen",
+        "module_name": "<root>"
+      },
+      "kind": "Module",
+      "attributes": {
+        "__signature": {
+          "Json": {
+            "parameters": [
+              {
+                "default_value": {
+                  "Enum": {
+                    "variant": "0603"
+                  }
+                },
+                "has_default": true,
+                "help": null,
+                "is_config": true,
+                "name": "package",
+                "optional": false,
+                "typ": {
+                  "kind": "enum",
+                  "name": "function",
+                  "variants": [
+                    "01005",
+                    "0201",
+                    "0402",
+                    "0603",
+                    "0805",
+                    "1206",
+                    "1210",
+                    "1812",
+                    "1825",
+                    "2220",
+                    "2225",
+                    "3640"
+                  ]
+                },
+                "value": {
+                  "Enum": {
+                    "variant": "0603"
+                  }
+                }
+              },
+              {
+                "default_value": {
+                  "Record": {
+                    "fields": {
+                      "__str__": {
+                        "Unsupported": "function"
+                      },
+                      "tolerance": {
+                        "Float": 0.0
+                      },
+                      "unit": {
+                        "Enum": {
+                          "variant": "F"
+                        }
+                      },
+                      "value": {
+                        "Float": 0.0
+                      }
+                    }
+                  }
+                },
+                "has_default": true,
+                "help": null,
+                "is_config": true,
+                "name": "value",
+                "optional": false,
+                "typ": {
+                  "fields": {},
+                  "kind": "record",
+                  "name": "function"
+                },
+                "value": {
+                  "Record": {
+                    "fields": {
+                      "__str__": {
+                        "Unsupported": "function"
+                      },
+                      "tolerance": {
+                        "Float": 0.0
+                      },
+                      "unit": {
+                        "Enum": {
+                          "variant": "F"
+                        }
+                      },
+                      "value": {
+                        "Float": 1e-11
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "default_value": {
+                  "Enum": {
+                    "variant": "SMD"
+                  }
+                },
+                "has_default": true,
+                "help": null,
+                "is_config": true,
+                "name": "mount",
+                "optional": true,
+                "typ": {
+                  "kind": "enum",
+                  "name": "function",
+                  "variants": [
+                    "SMD"
+                  ]
+                },
+                "value": {
+                  "Enum": {
+                    "variant": "SMD"
+                  }
+                }
+              },
+              {
+                "default_value": "None",
+                "has_default": true,
+                "help": null,
+                "is_config": true,
+                "name": "voltage",
+                "optional": true,
+                "typ": {
+                  "kind": "unknown",
+                  "type_name": "None | Voltage"
+                },
+                "value": "None"
+              },
+              {
+                "default_value": null,
+                "has_default": false,
+                "help": null,
+                "is_config": true,
+                "name": "dielectric",
+                "optional": true,
+                "typ": {
+                  "kind": "enum",
+                  "name": "function",
+                  "variants": [
+                    "C0G",
+                    "NP0",
+                    "X5R",
+                    "X7R",
+                    "X7S",
+                    "X7T",
+                    "Y5V",
+                    "Z5U"
+                  ]
+                },
+                "value": "None"
+              },
+              {
+                "default_value": "None",
+                "has_default": true,
+                "help": null,
+                "is_config": true,
+                "name": "esr",
+                "optional": true,
+                "typ": {
+                  "kind": "unknown",
+                  "type_name": "None | Resistance"
+                },
+                "value": "None"
+              },
+              {
+                "default_value": "None",
+                "has_default": true,
+                "help": null,
+                "is_config": true,
+                "name": "t_max",
+                "optional": true,
+                "typ": {
+                  "kind": "unknown",
+                  "type_name": "None | Temperature"
+                },
+                "value": "None"
+              },
+              {
+                "default_value": "None",
+                "has_default": true,
+                "help": null,
+                "is_config": true,
+                "name": "t_min",
+                "optional": true,
+                "typ": {
+                  "kind": "unknown",
+                  "type_name": "None | Temperature"
+                },
+                "value": "None"
+              },
+              {
+                "default_value": {
+                  "Dict": {}
+                },
+                "has_default": true,
+                "help": null,
+                "is_config": true,
+                "name": "user_properties",
+                "optional": true,
+                "typ": {
+                  "key": {
+                    "kind": "string"
+                  },
+                  "kind": "dict",
+                  "value": {
+                    "kind": "unknown",
+                    "type_name": "any"
+                  }
+                },
+                "value": {
+                  "Dict": {}
+                }
+              },
+              {
+                "default_value": null,
+                "has_default": false,
+                "help": null,
+                "is_config": true,
+                "name": "mpn",
+                "optional": true,
+                "typ": {
+                  "kind": "string"
+                },
+                "value": "None"
+              },
+              {
+                "default_value": null,
+                "has_default": false,
+                "help": null,
+                "is_config": true,
+                "name": "do_not_populate",
+                "optional": true,
+                "typ": {
+                  "kind": "bool"
+                },
+                "value": "None"
+              },
+              {
+                "default_value": null,
+                "has_default": false,
+                "help": null,
+                "is_config": true,
+                "name": "exclude_from_bom",
+                "optional": true,
+                "typ": {
+                  "kind": "bool"
+                },
+                "value": "None"
+              },
+              {
+                "default_value": {
+                  "Net": {
+                    "id": 348,
+                    "name": "P1",
+                    "properties": {}
+                  }
+                },
+                "has_default": true,
+                "help": null,
+                "is_config": false,
+                "name": "P1",
+                "optional": false,
+                "typ": {
+                  "kind": "net"
+                },
+                "value": {
+                  "Net": {
+                    "id": 345,
+                    "name": "T",
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "default_value": {
+                  "Net": {
+                    "id": 349,
+                    "name": "P2",
+                    "properties": {}
+                  }
+                },
+                "has_default": true,
+                "help": null,
+                "is_config": false,
+                "name": "P2",
+                "optional": false,
+                "typ": {
+                  "kind": "net"
+                },
+                "value": {
+                  "Net": {
+                    "id": 343,
+                    "name": "io_GND_GND",
+                    "properties": {
+                      "__symbol_value": {
+                        "String": "(symbol\n  \"GND\"\n  (power)\n  (pin_numbers\n    (hide yes)\n  )\n  (pin_names\n    (offset 0)\n    (hide yes)\n  )\n  (exclude_from_sim no)\n  (in_bom yes)\n  (on_board yes)\n  (property\n    \"Reference\"\n    \"#PWR\"\n    (at 0 -6.35 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"Value\"\n    \"GND\"\n    (at 0 -3.81 0)\n    (effects\n      (font (size 1.27 1.27))\n    )\n  )\n  (property\n    \"Footprint\"\n    \"\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"Datasheet\"\n    \"\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"Description\"\n    \"Power symbol creates a global label with name \\\"GND\\\" , ground\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"ki_keywords\"\n    \"global power\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (symbol\n    \"GND_0_1\"\n    (polyline\n      (pts\n        (xy 0 0)\n        (xy 0 -1.27)\n        (xy 1.27 -1.27)\n        (xy 0 -2.54)\n        (xy -1.27 -1.27)\n        (xy 0 -1.27)\n      )\n      (stroke\n        (width 0)\n        (type default)\n      )\n      (fill\n        (type none)\n      )\n    )\n  )\n  (symbol\n    \"GND_1_1\"\n    (pin\n      power_in\n      line\n      (at 0 0 270)\n      (length 0)\n      (name\n        \"~\"\n        (effects\n          (font (size 1.27 1.27))\n        )\n      )\n      (number\n        \"1\"\n        (effects\n          (font (size 1.27 1.27))\n        )\n      )\n    )\n  )\n  (embedded_fonts no)\n)"
+                      },
+                      "symbol_name": {
+                        "String": "GND"
+                      },
+                      "symbol_path": {
+                        "String": "/Users/abhinavreddy/Library/Caches/pcb/gitlab/kicad/libraries/kicad-symbols/9.0.0/power.kicad_sym"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "children": {
+        "C": "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.C1.C"
+      },
+      "reference_designator": null
+    },
+    "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.R1.R.P1": {
+      "type_ref": {
+        "source_path": "/Users/abhinavreddy/Library/Caches/pcb/github/diodeinc/stdlib/HEAD/generics/Resistor.zen",
+        "module_name": "R"
+      },
+      "kind": "Port",
+      "attributes": {
+        "pads": {
+          "Array": [
+            {
+              "String": "1"
+            }
+          ]
+        }
+      },
+      "children": {},
+      "reference_designator": null
+    },
+    "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.R1": {
+      "type_ref": {
+        "source_path": "/Users/abhinavreddy/Library/Caches/pcb/github/diodeinc/stdlib/HEAD/generics/Resistor.zen",
+        "module_name": "<root>"
+      },
+      "kind": "Module",
+      "attributes": {
+        "__signature": {
+          "Json": {
+            "parameters": [
+              {
+                "default_value": {
+                  "Enum": {
+                    "variant": "0603"
+                  }
+                },
+                "has_default": true,
+                "help": null,
+                "is_config": true,
+                "name": "package",
+                "optional": false,
+                "typ": {
+                  "kind": "enum",
+                  "name": "function",
+                  "variants": [
+                    "0201",
+                    "0402",
+                    "0603",
+                    "0805",
+                    "1206",
+                    "1210",
+                    "2010",
+                    "2512"
+                  ]
+                },
+                "value": {
+                  "Enum": {
+                    "variant": "0603"
+                  }
+                }
+              },
+              {
+                "default_value": {
+                  "Record": {
+                    "fields": {
+                      "__str__": {
+                        "Unsupported": "function"
+                      },
+                      "tolerance": {
+                        "Float": 0.0
+                      },
+                      "unit": {
+                        "Enum": {
+                          "variant": "Ohms"
+                        }
+                      },
+                      "value": {
+                        "Float": 0.0
+                      }
+                    }
+                  }
+                },
+                "has_default": true,
+                "help": null,
+                "is_config": true,
+                "name": "value",
+                "optional": false,
+                "typ": {
+                  "fields": {},
+                  "kind": "record",
+                  "name": "function"
+                },
+                "value": {
+                  "Record": {
+                    "fields": {
+                      "__str__": {
+                        "Unsupported": "function"
+                      },
+                      "tolerance": {
+                        "Float": 0.0
+                      },
+                      "unit": {
+                        "Enum": {
+                          "variant": "Ohms"
+                        }
+                      },
+                      "value": {
+                        "Float": 100.0
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "default_value": {
+                  "Enum": {
+                    "variant": "SMD"
+                  }
+                },
+                "has_default": true,
+                "help": null,
+                "is_config": true,
+                "name": "mount",
+                "optional": true,
+                "typ": {
+                  "kind": "enum",
+                  "name": "function",
+                  "variants": [
+                    "SMD"
+                  ]
+                },
+                "value": {
+                  "Enum": {
+                    "variant": "SMD"
+                  }
+                }
+              },
+              {
+                "default_value": "None",
+                "has_default": true,
+                "help": null,
+                "is_config": true,
+                "name": "voltage",
+                "optional": true,
+                "typ": {
+                  "kind": "unknown",
+                  "type_name": "None | Voltage"
+                },
+                "value": "None"
+              },
+              {
+                "default_value": {
+                  "Bool": false
+                },
+                "has_default": true,
+                "help": null,
+                "is_config": true,
+                "name": "use_us_symbol",
+                "optional": true,
+                "typ": {
+                  "kind": "bool"
+                },
+                "value": {
+                  "Bool": false
+                }
+              },
+              {
+                "default_value": {
+                  "Dict": {}
+                },
+                "has_default": true,
+                "help": null,
+                "is_config": true,
+                "name": "user_properties",
+                "optional": true,
+                "typ": {
+                  "key": {
+                    "kind": "string"
+                  },
+                  "kind": "dict",
+                  "value": {
+                    "kind": "unknown",
+                    "type_name": "any"
+                  }
+                },
+                "value": {
+                  "Dict": {}
+                }
+              },
+              {
+                "default_value": null,
+                "has_default": false,
+                "help": null,
+                "is_config": true,
+                "name": "mpn",
+                "optional": true,
+                "typ": {
+                  "kind": "string"
+                },
+                "value": "None"
+              },
+              {
+                "default_value": null,
+                "has_default": false,
+                "help": null,
+                "is_config": true,
+                "name": "do_not_populate",
+                "optional": true,
+                "typ": {
+                  "kind": "bool"
+                },
+                "value": "None"
+              },
+              {
+                "default_value": null,
+                "has_default": false,
+                "help": null,
+                "is_config": true,
+                "name": "exclude_from_bom",
+                "optional": true,
+                "typ": {
+                  "kind": "bool"
+                },
+                "value": "None"
+              },
+              {
+                "default_value": {
+                  "Net": {
+                    "id": 350,
+                    "name": "P1",
+                    "properties": {}
+                  }
+                },
+                "has_default": true,
+                "help": null,
+                "is_config": false,
+                "name": "P1",
+                "optional": false,
+                "typ": {
+                  "kind": "net"
+                },
+                "value": {
+                  "Net": {
+                    "id": 345,
+                    "name": "T",
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "default_value": {
+                  "Net": {
+                    "id": 351,
+                    "name": "P2",
+                    "properties": {}
+                  }
+                },
+                "has_default": true,
+                "help": null,
+                "is_config": false,
+                "name": "P2",
+                "optional": false,
+                "typ": {
+                  "kind": "net"
+                },
+                "value": {
+                  "Net": {
+                    "id": 342,
+                    "name": "io_OUT",
+                    "properties": {}
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "children": {
+        "R": "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.R1.R"
+      },
+      "reference_designator": null
+    },
+    "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.L1.L": {
+      "type_ref": {
+        "source_path": "/Users/abhinavreddy/Library/Caches/pcb/github/diodeinc/stdlib/HEAD/generics/Inductor.zen",
+        "module_name": "L"
+      },
+      "kind": "Component",
+      "attributes": {
+        "Type": {
+          "String": "inductor"
+        },
+        "symbol_path": {
+          "String": "/Users/abhinavreddy/Library/Caches/pcb/gitlab/kicad/libraries/kicad-symbols/9.0.0/Device.kicad_sym"
+        },
+        "footprint": {
+          "String": "/Users/abhinavreddy/Library/Caches/pcb/gitlab/kicad/libraries/kicad-footprints/9.0.0/Inductor_SMD.pretty/L_0603_1608Metric.kicad_mod"
+        },
+        "symbol_name": {
+          "String": "L"
+        },
+        "__symbol_value": {
+          "String": "(symbol\n  \"L\"\n  (pin_numbers\n    (hide yes)\n  )\n  (pin_names\n    (offset 1.016)\n    (hide yes)\n  )\n  (exclude_from_sim no)\n  (in_bom yes)\n  (on_board yes)\n  (property\n    \"Reference\"\n    \"L\"\n    (at -1.27 0 90)\n    (effects\n      (font (size 1.27 1.27))\n    )\n  )\n  (property\n    \"Value\"\n    \"L\"\n    (at 1.905 0 90)\n    (effects\n      (font (size 1.27 1.27))\n    )\n  )\n  (property\n    \"Footprint\"\n    \"\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"Datasheet\"\n    \"~\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"Description\"\n    \"Inductor\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"ki_keywords\"\n    \"inductor choke coil reactor magnetic\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"ki_fp_filters\"\n    \"Choke_* *Coil* Inductor_* L_*\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (symbol\n    \"L_0_1\"\n    (arc\n      (start\n        0\n        2.54\n      )\n      (mid\n        0.6323\n        1.905\n      )\n      (end\n        0\n        1.27\n      )\n      (stroke\n        (width 0)\n        (type default)\n      )\n      (fill\n        (type none)\n      )\n    )\n    (arc\n      (start\n        0\n        1.27\n      )\n      (mid\n        0.6323\n        0.635\n      )\n      (end\n        0\n        0\n      )\n      (stroke\n        (width 0)\n        (type default)\n      )\n      (fill\n        (type none)\n      )\n    )\n    (arc\n      (start\n        0\n        0\n      )\n      (mid\n        0.6323\n        -0.635\n      )\n      (end\n        0\n        -1.27\n      )\n      (stroke\n        (width 0)\n        (type default)\n      )\n      (fill\n        (type none)\n      )\n    )\n    (arc\n      (start\n        0\n        -1.27\n      )\n      (mid\n        0.6323\n        -1.905\n      )\n      (end\n        0\n        -2.54\n      )\n      (stroke\n        (width 0)\n        (type default)\n      )\n      (fill\n        (type none)\n      )\n    )\n  )\n  (symbol\n    \"L_1_1\"\n    (pin\n      passive\n      line\n      (at 0 3.81 270)\n      (length 1.27)\n      (name\n        \"1\"\n        (effects\n          (font (size 1.27 1.27))\n        )\n      )\n      (number\n        \"1\"\n        (effects\n          (font (size 1.27 1.27))\n        )\n      )\n    )\n    (pin\n      passive\n      line\n      (at 0 -3.81 90)\n      (length 1.27)\n      (name\n        \"2\"\n        (effects\n          (font (size 1.27 1.27))\n        )\n      )\n      (number\n        \"2\"\n        (effects\n          (font (size 1.27 1.27))\n        )\n      )\n    )\n  )\n  (embedded_fonts no)\n)"
+        },
+        "Package": {
+          "String": "0603"
+        },
+        "__value__": {
+          "Physical": {
+            "value": "0.00000001",
+            "tolerance": "0",
+            "unit": "Henries"
+          }
+        },
+        "Inductance": {
+          "String": "10nH"
+        },
+        "Value": {
+          "String": "10nH"
+        },
+        "__inductance__": {
+          "Physical": {
+            "value": "0.00000001",
+            "tolerance": "0",
+            "unit": "Henries"
+          }
+        },
+        "prefix": {
+          "String": "L"
+        }
+      },
+      "children": {
+        "1": "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.L1.L.1",
+        "2": "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.L1.L.2"
+      },
+      "reference_designator": "L1"
+    },
+    "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.C1.C.P1": {
+      "type_ref": {
+        "source_path": "/Users/abhinavreddy/Library/Caches/pcb/github/diodeinc/stdlib/HEAD/generics/Capacitor.zen",
+        "module_name": "C"
+      },
+      "kind": "Port",
+      "attributes": {
+        "pads": {
+          "Array": [
+            {
+              "String": "1"
+            }
+          ]
+        }
+      },
+      "children": {},
+      "reference_designator": null
+    },
+    "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>": {
+      "type_ref": {
+        "source_path": "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen",
+        "module_name": "<root>"
+      },
+      "kind": "Module",
+      "attributes": {
+        "layout_path": {
+          "String": "layout/MatchingNetwork"
+        },
+        "__signature": {
+          "Json": {
+            "parameters": [
+              {
+                "default_value": {
+                  "Net": {
+                    "id": 341,
+                    "name": "io_IN",
+                    "properties": {}
+                  }
+                },
+                "has_default": true,
+                "help": null,
+                "is_config": false,
+                "name": "io_IN",
+                "optional": false,
+                "typ": {
+                  "kind": "net"
+                },
+                "value": {
+                  "Net": {
+                    "id": 341,
+                    "name": "io_IN",
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "default_value": {
+                  "Net": {
+                    "id": 342,
+                    "name": "io_OUT",
+                    "properties": {}
+                  }
+                },
+                "has_default": true,
+                "help": null,
+                "is_config": false,
+                "name": "io_OUT",
+                "optional": false,
+                "typ": {
+                  "kind": "net"
+                },
+                "value": {
+                  "Net": {
+                    "id": 342,
+                    "name": "io_OUT",
+                    "properties": {}
+                  }
+                }
+              },
+              {
+                "default_value": {
+                  "Interface": {
+                    "fields": {
+                      "NET": {
+                        "Net": {
+                          "id": 343,
+                          "name": "io_GND_GND",
+                          "properties": {
+                            "__symbol_value": {
+                              "String": "(symbol\n  \"GND\"\n  (power)\n  (pin_numbers\n    (hide yes)\n  )\n  (pin_names\n    (offset 0)\n    (hide yes)\n  )\n  (exclude_from_sim no)\n  (in_bom yes)\n  (on_board yes)\n  (property\n    \"Reference\"\n    \"#PWR\"\n    (at 0 -6.35 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"Value\"\n    \"GND\"\n    (at 0 -3.81 0)\n    (effects\n      (font (size 1.27 1.27))\n    )\n  )\n  (property\n    \"Footprint\"\n    \"\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"Datasheet\"\n    \"\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"Description\"\n    \"Power symbol creates a global label with name \\\"GND\\\" , ground\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"ki_keywords\"\n    \"global power\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (symbol\n    \"GND_0_1\"\n    (polyline\n      (pts\n        (xy 0 0)\n        (xy 0 -1.27)\n        (xy 1.27 -1.27)\n        (xy 0 -2.54)\n        (xy -1.27 -1.27)\n        (xy 0 -1.27)\n      )\n      (stroke\n        (width 0)\n        (type default)\n      )\n      (fill\n        (type none)\n      )\n    )\n  )\n  (symbol\n    \"GND_1_1\"\n    (pin\n      power_in\n      line\n      (at 0 0 270)\n      (length 0)\n      (name\n        \"~\"\n        (effects\n          (font (size 1.27 1.27))\n        )\n      )\n      (number\n        \"1\"\n        (effects\n          (font (size 1.27 1.27))\n        )\n      )\n    )\n  )\n  (embedded_fonts no)\n)"
+                            },
+                            "symbol_name": {
+                              "String": "GND"
+                            },
+                            "symbol_path": {
+                              "String": "/Users/abhinavreddy/Library/Caches/pcb/gitlab/kicad/libraries/kicad-symbols/9.0.0/power.kicad_sym"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "promotion_by_type": {
+                      "Ground": "",
+                      "Net": "NET"
+                    }
+                  }
+                },
+                "has_default": true,
+                "help": null,
+                "is_config": false,
+                "name": "io_GND",
+                "optional": false,
+                "typ": {
+                  "kind": "interface",
+                  "name": "Ground",
+                  "pins": [
+                    [
+                      "NET",
+                      {
+                        "kind": "net"
+                      }
+                    ]
+                  ]
+                },
+                "value": {
+                  "Interface": {
+                    "fields": {
+                      "NET": {
+                        "Net": {
+                          "id": 343,
+                          "name": "io_GND_GND",
+                          "properties": {
+                            "__symbol_value": {
+                              "String": "(symbol\n  \"GND\"\n  (power)\n  (pin_numbers\n    (hide yes)\n  )\n  (pin_names\n    (offset 0)\n    (hide yes)\n  )\n  (exclude_from_sim no)\n  (in_bom yes)\n  (on_board yes)\n  (property\n    \"Reference\"\n    \"#PWR\"\n    (at 0 -6.35 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"Value\"\n    \"GND\"\n    (at 0 -3.81 0)\n    (effects\n      (font (size 1.27 1.27))\n    )\n  )\n  (property\n    \"Footprint\"\n    \"\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"Datasheet\"\n    \"\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"Description\"\n    \"Power symbol creates a global label with name \\\"GND\\\" , ground\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"ki_keywords\"\n    \"global power\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (symbol\n    \"GND_0_1\"\n    (polyline\n      (pts\n        (xy 0 0)\n        (xy 0 -1.27)\n        (xy 1.27 -1.27)\n        (xy 0 -2.54)\n        (xy -1.27 -1.27)\n        (xy 0 -1.27)\n      )\n      (stroke\n        (width 0)\n        (type default)\n      )\n      (fill\n        (type none)\n      )\n    )\n  )\n  (symbol\n    \"GND_1_1\"\n    (pin\n      power_in\n      line\n      (at 0 0 270)\n      (length 0)\n      (name\n        \"~\"\n        (effects\n          (font (size 1.27 1.27))\n        )\n      )\n      (number\n        \"1\"\n        (effects\n          (font (size 1.27 1.27))\n        )\n      )\n    )\n  )\n  (embedded_fonts no)\n)"
+                            },
+                            "symbol_name": {
+                              "String": "GND"
+                            },
+                            "symbol_path": {
+                              "String": "/Users/abhinavreddy/Library/Caches/pcb/gitlab/kicad/libraries/kicad-symbols/9.0.0/power.kicad_sym"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "promotion_by_type": {
+                      "Ground": "",
+                      "Net": "NET"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "children": {
+        "L1": "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.L1",
+        "C1": "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.C1",
+        "R1": "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.R1"
+      },
+      "reference_designator": null
+    },
+    "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.C1.C.P2": {
+      "type_ref": {
+        "source_path": "/Users/abhinavreddy/Library/Caches/pcb/github/diodeinc/stdlib/HEAD/generics/Capacitor.zen",
+        "module_name": "C"
+      },
+      "kind": "Port",
+      "attributes": {
+        "pads": {
+          "Array": [
+            {
+              "String": "2"
+            }
+          ]
+        }
+      },
+      "children": {},
+      "reference_designator": null
+    },
+    "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.R1.R.P2": {
+      "type_ref": {
+        "source_path": "/Users/abhinavreddy/Library/Caches/pcb/github/diodeinc/stdlib/HEAD/generics/Resistor.zen",
+        "module_name": "R"
+      },
+      "kind": "Port",
+      "attributes": {
+        "pads": {
+          "Array": [
+            {
+              "String": "2"
+            }
+          ]
+        }
+      },
+      "children": {},
+      "reference_designator": null
+    }
+  },
+  "nets": {
+    "io_OUT": {
+      "kind": "Normal",
+      "id": 342,
+      "name": "io_OUT",
+      "ports": [
+        "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.R1.R.P2"
+      ],
+      "properties": {}
+    },
+    "io_IN": {
+      "kind": "Normal",
+      "id": 341,
+      "name": "io_IN",
+      "ports": [
+        "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.L1.L.1"
+      ],
+      "properties": {}
+    },
+    "T": {
+      "kind": "Normal",
+      "id": 345,
+      "name": "T",
+      "ports": [
+        "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.L1.L.2",
+        "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.C1.C.P1",
+        "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.R1.R.P1"
+      ],
+      "properties": {}
+    },
+    "io_GND_GND": {
+      "kind": "Normal",
+      "id": 343,
+      "name": "io_GND_GND",
+      "ports": [
+        "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>.C1.C.P2"
+      ],
+      "properties": {
+        "symbol_name": {
+          "String": "GND"
+        },
+        "__symbol_value": {
+          "String": "(symbol\n  \"GND\"\n  (power)\n  (pin_numbers\n    (hide yes)\n  )\n  (pin_names\n    (offset 0)\n    (hide yes)\n  )\n  (exclude_from_sim no)\n  (in_bom yes)\n  (on_board yes)\n  (property\n    \"Reference\"\n    \"#PWR\"\n    (at 0 -6.35 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"Value\"\n    \"GND\"\n    (at 0 -3.81 0)\n    (effects\n      (font (size 1.27 1.27))\n    )\n  )\n  (property\n    \"Footprint\"\n    \"\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"Datasheet\"\n    \"\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"Description\"\n    \"Power symbol creates a global label with name \\\"GND\\\" , ground\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (property\n    \"ki_keywords\"\n    \"global power\"\n    (at 0 0 0)\n    (effects\n      (font (size 1.27 1.27))\n      (hide yes)\n    )\n  )\n  (symbol\n    \"GND_0_1\"\n    (polyline\n      (pts\n        (xy 0 0)\n        (xy 0 -1.27)\n        (xy 1.27 -1.27)\n        (xy 0 -2.54)\n        (xy -1.27 -1.27)\n        (xy 0 -1.27)\n      )\n      (stroke\n        (width 0)\n        (type default)\n      )\n      (fill\n        (type none)\n      )\n    )\n  )\n  (symbol\n    \"GND_1_1\"\n    (pin\n      power_in\n      line\n      (at 0 0 270)\n      (length 0)\n      (name\n        \"~\"\n        (effects\n          (font (size 1.27 1.27))\n        )\n      )\n      (number\n        \"1\"\n        (effects\n          (font (size 1.27 1.27))\n        )\n      )\n    )\n  )\n  (embedded_fonts no)\n)"
+        },
+        "symbol_path": {
+          "String": "/Users/abhinavreddy/Library/Caches/pcb/gitlab/kicad/libraries/kicad-symbols/9.0.0/power.kicad_sym"
+        }
+      }
+    }
+  },
+  "root_ref": "/Users/abhinavreddy/Work/example/modules/MatchingNetwork.zen:<root>",
+  "symbols": {}
+}

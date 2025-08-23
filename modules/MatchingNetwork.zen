@@ -1,0 +1,19 @@
+load("@stdlib/interfaces.zen", "Ground")
+load("@stdlib/properties.zen", "Layout")
+
+Capacitor = Module("@stdlib/generics/Capacitor.zen")
+Inductor = Module("@stdlib/generics/Inductor.zen")
+Resistor = Module("@stdlib/generics/Resistor.zen")
+
+io_IN = io("io_IN", Net)
+io_OUT = io("io_OUT", Net)
+io_GND = io("io_GND", Ground)
+
+L_IN = Net("L_IN")
+T = Net("T")
+
+Inductor(name = "L1", value = "10nH", package = "0603", P1 = io_IN, P2 = T)
+Capacitor(name = "C1", value = "10pF", package = "0603", P1 = T, P2 = io_GND)
+Resistor(name = "R1", value = "100ohm", package = "0603", P1 = T, P2 = io_OUT)
+
+Layout(name = "MatchingNetwork", path = "layout/MatchingNetwork")
