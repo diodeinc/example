@@ -1,0 +1,9 @@
+"""EX0001 Antenna matching network"""
+
+load("@stdlib/properties.zen", "Layout")
+
+Layout(
+    name = "EX0001",
+    path = "layout/EX0001",
+)
+

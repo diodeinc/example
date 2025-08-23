@@ -1,0 +1,5 @@
+[workspace]
+name = "zener"
+
+[dependencies]
+stdlib = "@github/diodeinc/stdlib:v0.2.2"

@@ -1,0 +1,21 @@
+{
+  "instances": {
+    "/Users/davide/src/diodeinc/example/boards/EX0001/EX0001.zen:<root>": {
+      "type_ref": {
+        "source_path": "/Users/davide/src/diodeinc/example/boards/EX0001/EX0001.zen",
+        "module_name": "<root>"
+      },
+      "kind": "Module",
+      "attributes": {
+        "layout_path": {
+          "String": "layout/EX0001"
+        }
+      },
+      "children": {},
+      "reference_designator": null
+    }
+  },
+  "nets": {},
+  "root_ref": "/Users/davide/src/diodeinc/example/boards/EX0001/EX0001.zen:<root>",
+  "symbols": {}
+}
