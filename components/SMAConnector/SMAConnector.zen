@@ -4,14 +4,17 @@ load("@stdlib/properties.zen", "Layout")
 In = io("In", Net)
 Ext = io("Ext", Net)
 
+prefix = config("prefix", str, default="J")
+
 Component(
     name = "SMA_Connector",
     footprint = File("@kicad-footprints/Connector_Coaxial.pretty/SMA_Amphenol_132134_Vertical.kicad_mod"),
     symbol = Symbol("@kicad-symbols/Connector.kicad_sym:Conn_Coaxial_Small"),
+    prefix = prefix,
     pins = {
         "In": In,
         "Ext": Ext
     }
 )
 
-Layout(name = "SMA Connector", path = "build/preview")
+Layout(name = "SMA_Connector", path = "build/preview")
