@@ -27,11 +27,11 @@ The open source PCB compiler is available at [`github.com/diodeinc/pcb`](https:/
 
 ## What is a .zen file?
 
-- Component(...): Defines a part by symbol/footprint and pins
-- io(...): Declares typed ports/nets (e.g., `Net`, `Ground`)
-- Module("path"): Reuses another `.zen` module
+- `Component(...)`: Defines a part by symbol/footprint and pins
+- `io(...)`: Declares typed ports/nets (e.g., `Net`, `Ground`)
+- `Module("path")`: Reuses another `.zen` module
 - Wiring: Connect modules/components by shared nets
-- Layout(...): Hints where to emit previews/outputs
+- `Layout(...)`: Hints where to emit previews/outputs
 
 See `modules/Antenna.zen`, `modules/SMAConnector.zen`, and the composed board `boards/EX0001/EX0001.zen` for examples.
 
