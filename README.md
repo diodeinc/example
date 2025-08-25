@@ -19,8 +19,8 @@ The open source PCB compiler is available at [`github.com/diodeinc/pcb`](https:/
 ```
 .
 ├── README.md
-├── components              # Auto-generated component definitions (do not edit)
-├── modules                 # Reusable modules made manually (.zen)
+├── components              # Physical items on the PCB that usually don't have an existing generic
+├── modules                 # Reusable pieces of Zener that can be composed of one or more components or other modules
 ├── boards                  # Board compositions (.zen)
 └── pcb.toml                # Workspace + dependencies
 ```
